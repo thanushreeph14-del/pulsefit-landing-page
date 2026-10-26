@@ -1,0 +1,784 @@
+
+/* =========================
+   1. Global styles
+========================= */
+
+:root {
+  --bg: #0b0d12;
+  --surface: #131720;
+  --surface-light: #1b202b;
+  --text: #f5f6fa;
+  --muted: #a3aab8;
+  --accent: #c4f45b;
+  --border: rgba(255, 255, 255, 0.10);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+.section-padding {
+  padding: 100px max(6%, calc((100% - 1200px) / 2));
+}
+
+.accent-text {
+  color: var(--accent);
+}
+
+.eyebrow {
+  display: inline-block;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2 {
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+}
+
+h2 {
+  font-size: clamp(30px, 4vw, 46px);
+  margin-bottom: 20px;
+}
+
+p {
+  color: var(--muted);
+}
+
+/* =========================
+   2. Navigation bar
+========================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(11, 13, 18, 0.95);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+}
+
+.nav-container {
+  max-width: 1320px;
+  min-height: 76px;
+  margin: auto;
+  padding: 14px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.brand-icon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.desktop-links {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.desktop-links a,
+.mobile-links a {
+  color: var(--muted);
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.desktop-links a:hover,
+.mobile-links a:hover {
+  color: var(--accent);
+}
+
+.nav-button,
+.primary-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--accent);
+  color: #10130a;
+  font-weight: 700;
+  padding: 13px 22px;
+  border-radius: 7px;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.nav-button:hover,
+.primary-button:hover {
+  transform: translateY(-3px);
+  background: #d7ff82;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+/* =========================
+   3. Hero section
+========================= */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 50px;
+  min-height: 620px;
+}
+
+.hero-content h1 {
+  font-size: clamp(44px, 6vw, 76px);
+  margin-bottom: 24px;
+}
+
+.hero-description {
+  max-width: 510px;
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  transition: border-color 0.2s;
+}
+
+.secondary-button:hover {
+  border-color: var(--accent);
+}
+
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin-top: 44px;
+  padding-top: 25px;
+  border-top: 1px solid var(--border);
+}
+
+.hero-stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hero-stats strong {
+  font-size: 18px;
+}
+
+.hero-stats span {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.hero-visual {
+  position: relative;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  min-height: 430px;
+}
+
+.product-glow {
+  position: absolute;
+  width: 80%;
+  aspect-ratio: 1;
+  background: var(--accent);
+  opacity: 0.13;
+  filter: blur(90px);
+  border-radius: 50%;
+}
+
+.watch-image {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 22px;
+  border: 1px solid var(--border);
+}
+
+.floating-card {
+  position: absolute;
+  z-index: 2;
+  left: -25px;
+  bottom: 35px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #171c24;
+  box-shadow: 0 15px 40px #0005;
+}
+
+.floating-card strong {
+  font-size: 14px;
+}
+
+.floating-card p {
+  font-size: 12px;
+  margin: 4px 0 0;
+}
+
+.pulse-dot {
+  width: 11px;
+  height: 11px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 14px var(--accent);
+}
+
+/* =========================
+   4. Section headings
+========================= */
+
+.section-heading {
+  max-width: 700px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.section-heading p {
+  margin-bottom: 0;
+}
+
+/* =========================
+   5. Features
+========================= */
+
+.features-section {
+  background: #10131a;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.feature-card {
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  transition: transform 0.25s, border-color 0.25s;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+}
+
+.feature-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #c4f45b18;
+  color: var(--accent);
+  font-size: 25px;
+  margin-bottom: 24px;
+}
+
+.feature-card h3 {
+  font-size: 19px;
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 26px;
+}
+
+.card-number {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: var(--accent);
+}
+
+/* =========================
+   6. Benefits
+========================= */
+
+.benefits-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 70px;
+}
+
+.benefit-visual img {
+  width: 100%;
+  height: 470px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.benefit-content > p {
+  line-height: 1.9;
+  margin-bottom: 26px;
+}
+
+.benefit-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+}
+
+.benefit-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 15px 0;
+  font-size: 14px;
+}
+
+.benefit-list li span {
+  color: var(--accent);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* =========================
+   7. Reviews
+========================= */
+
+.reviews-section {
+  background: #10131a;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.review-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 26px;
+}
+
+.stars {
+  color: var(--accent);
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.review-card blockquote {
+  margin: 0 0 25px;
+  color: #e1e4eb;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--bg);
+  font-weight: bold;
+}
+
+.review-author strong {
+  font-size: 13px;
+}
+
+.review-author p {
+  margin: 3px 0 0;
+  font-size: 12px;
+}
+
+.review-note {
+  margin: 25px 0 0;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* =========================
+   8. Pricing / CTA
+========================= */
+
+.pricing-section {
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+.pricing-card {
+  text-align: center;
+  max-width: 850px;
+  margin: auto;
+  padding: 65px 25px;
+  border: 1px solid #c4f45b50;
+  border-radius: 22px;
+  background:
+    radial-gradient(ellipse at top, #c4f45b12, transparent 60%),
+    var(--surface);
+}
+
+.pricing-card h2 {
+  margin-bottom: 18px;
+}
+
+.pricing-card > p {
+  max-width: 520px;
+  margin: 0 auto 24px;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 28px 0;
+}
+
+.price-label {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.price strong {
+  font-size: 42px;
+  color: var(--accent);
+}
+
+.pricing-note {
+  margin-top: 20px !important;
+  font-size: 11px;
+}
+
+/* =========================
+   9. Footer
+========================= */
+
+.footer {
+  padding: 55px 6% 20px;
+  background: #080a0e;
+  border-top: 1px solid var(--border);
+}
+
+.footer-main {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3, 1fr);
+  gap: 35px;
+  padding-bottom: 40px;
+}
+
+.footer-description {
+  font-size: 13px;
+  margin-top: 16px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.footer-links strong {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.footer-links a,
+.footer-bottom a {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.footer-links a:hover,
+.footer-bottom a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-bottom p {
+  font-size: 12px;
+  margin: 0;
+}
+
+/* =========================
+   10. Tablet
+========================= */
+
+@media (max-width: 900px) {
+  .section-padding {
+    padding: 75px 5%;
+  }
+
+  .desktop-links {
+    gap: 14px;
+  }
+
+  .desktop-links a {
+    font-size: 12px;
+  }
+
+  .nav-container {
+    gap: 14px;
+  }
+
+  .nav-button {
+    padding: 11px 14px;
+    font-size: 12px;
+  }
+
+  .hero {
+    gap: 28px;
+  }
+
+  .hero-stats {
+    gap: 20px;
+  }
+
+  .feature-grid,
+  .review-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .benefits-section {
+    gap: 35px;
+  }
+
+  .footer-main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================
+   11. Mobile
+========================= */
+
+@media (max-width: 600px) {
+  .section-padding {
+    padding: 60px 6%;
+  }
+
+  .nav-container {
+    min-height: 68px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .brand {
+    font-size: 19px;
+  }
+
+  .brand-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .desktop-links {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+    order: 3;
+    width: 100%;
+  }
+
+  .mobile-menu summary {
+    display: inline-block;
+    padding: 8px 0;
+    cursor: pointer;
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  .mobile-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 12px 0 5px;
+  }
+
+  .nav-button {
+    margin-left: auto;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-top: 60px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(42px, 12vw, 58px);
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+
+  .hero-stats {
+    gap: 18px;
+  }
+
+  .hero-stats strong {
+    font-size: 15px;
+  }
+
+  .hero-stats span {
+    font-size: 11px;
+  }
+
+  .hero-visual {
+    min-height: 300px;
+  }
+
+  .watch-image {
+    height: 310px;
+  }
+
+  .floating-card {
+    left: -5px;
+    bottom: 15px;
+    padding: 12px;
+  }
+
+  .feature-grid,
+  .review-grid,
+  .benefits-section {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    padding: 24px;
+  }
+
+  .benefit-visual img {
+    height: 320px;
+  }
+
+  .section-heading {
+    margin-bottom: 32px;
+  }
+
+  .pricing-card {
+    padding: 45px 18px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 20px;
+  }
+
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* =========================
+   12. Accessibility
+========================= */
+
+a:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

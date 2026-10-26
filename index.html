@@ -1,0 +1,347 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Discover PulseFit, a stylish smartwatch designed for fitness, health tracking and everyday life.">
+
+  <title>PulseFit | Smartwatch</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- 1. Navigation Bar -->
+  <header class="navbar">
+    <nav class="nav-container">
+      <a href="#home" class="brand">
+        <span class="brand-icon">P</span>
+        PulseFit
+      </a>
+
+      <details class="mobile-menu">
+        <summary aria-label="Toggle navigation">☰ Menu</summary>
+        <div class="mobile-links">
+          <a href="#home">Home</a>
+          <a href="#features">Features</a>
+          <a href="#benefits">Benefits</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#pricing">Pricing</a>
+        </div>
+      </details>
+
+      <div class="desktop-links">
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#pricing">Pricing</a>
+      </div>
+
+      <a href="#pricing" class="nav-button">Get PulseFit ↗</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- 2. Hero Section -->
+    <section id="home" class="hero section-padding">
+      <div class="hero-content">
+        <span class="eyebrow">
+          ● YOUR LIFE, IN SYNC
+        </span>
+
+        <h1>
+          Every move.<br>
+          <span class="accent-text">A better you.</span>
+        </h1>
+
+        <p class="hero-description">
+          Meet PulseFit, your everyday smartwatch for tracking
+          fitness, staying connected and reaching your goals.
+          Designed for your life. Built for your next level.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#pricing" class="primary-button">Shop PulseFit →</a>
+          <a href="#features" class="secondary-button">Explore features</a>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <strong>7 Days</strong>
+            <span>Battery life*</span>
+          </div>
+          <div>
+            <strong>24/7</strong>
+            <span>Activity tracking</span>
+          </div>
+          <div>
+            <strong>5 ATM</strong>
+            <span>Water resistance*</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="product-glow"></div>
+        <img
+          class="watch-image"
+          src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=85"
+          alt="Minimalist wristwatch product photography"
+        >
+        <div class="floating-card">
+          <span class="pulse-dot"></span>
+          <div>
+            <strong>Stay in your zone</strong>
+            <p>Keep moving. Keep growing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Features Section -->
+    <section id="features" class="features-section section-padding">
+      <div class="section-heading">
+        <span class="eyebrow">MADE FOR YOUR EVERYDAY</span>
+        <h2>Small watch. <span class="accent-text">Big possibilities.</span></h2>
+        <p>Everything you need to move smarter and live better.</p>
+      </div>
+
+      <div class="feature-grid">
+
+        <article class="feature-card">
+          <div class="feature-icon">♥</div>
+          <h3>Health at a glance</h3>
+          <p>
+            View supported health metrics and activity trends
+            right from your wrist.
+          </p>
+          <span class="card-number">01 / HEALTH</span>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">↗</div>
+          <h3>Fitness tracking</h3>
+          <p>
+            Keep track of workouts, daily movement and progress
+            toward your activity goals.
+          </p>
+          <span class="card-number">02 / FITNESS</span>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">◷</div>
+          <h3>Long-lasting power</h3>
+          <p>
+            Spend more time on your goals and less time
+            worrying about charging.
+          </p>
+          <span class="card-number">03 / BATTERY</span>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">✦</div>
+          <h3>Timeless design</h3>
+          <p>
+            Pair a clean, modern look with everyday outfits
+            and different occasions.
+          </p>
+          <span class="card-number">04 / DESIGN</span>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">⌁</div>
+          <h3>Stay connected</h3>
+          <p>
+            Check compatible notifications without constantly
+            reaching for your phone.
+          </p>
+          <span class="card-number">05 / CONNECTIVITY</span>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">◎</div>
+          <h3>Your daily goals</h3>
+          <p>
+            Build consistent habits by checking your progress
+            and celebrating small wins.
+          </p>
+          <span class="card-number">06 / PROGRESS</span>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 4. Benefits Section -->
+    <section id="benefits" class="benefits-section section-padding">
+      <div class="benefit-visual">
+        <img
+          src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=900&q=85"
+          alt="Watch worn on a wrist"
+          loading="lazy"
+        >
+      </div>
+
+      <div class="benefit-content">
+        <span class="eyebrow">MORE THAN A WATCH</span>
+        <h2>Make every day <span class="accent-text">count.</span></h2>
+
+        <p>
+          Your goals deserve more than good intentions.
+          PulseFit helps you build routines, understand your
+          activity and stay mindful of your everyday progress.
+        </p>
+
+        <ul class="benefit-list">
+          <li><span>✓</span> Keep your daily goals in view</li>
+          <li><span>✓</span> Make movement part of your routine</li>
+          <li><span>✓</span> Stay organized and connected</li>
+          <li><span>✓</span> Track your progress over time</li>
+        </ul>
+
+        <a href="#pricing" class="primary-button">Discover PulseFit →</a>
+      </div>
+    </section>
+
+    <!-- 5. Testimonials Section -->
+    <section id="reviews" class="reviews-section section-padding">
+      <div class="section-heading">
+        <span class="eyebrow">THE PULSEFIT COMMUNITY</span>
+        <h2>Made for real <span class="accent-text">life.</span></h2>
+        <p>Example testimonial cards for this demonstration website.</p>
+      </div>
+
+      <div class="review-grid">
+        <article class="review-card">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>
+            "I love having my daily activity goals visible.
+            It gives me a little reminder to keep moving."
+          </blockquote>
+          <div class="review-author">
+            <div class="avatar">A</div>
+            <div>
+              <strong>Alex Morgan</strong>
+              <p>Fitness enthusiast</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>
+            "The minimalist look works with almost everything
+            I wear. It feels right for everyday use."
+          </blockquote>
+          <div class="review-author">
+            <div class="avatar">S</div>
+            <div>
+              <strong>Sam Taylor</strong>
+              <p>Everyday explorer</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>
+            "Having my activity information in one place
+            makes following my routine feel easier."
+          </blockquote>
+          <div class="review-author">
+            <div class="avatar">J</div>
+            <div>
+              <strong>Jordan Lee</strong>
+              <p>Busy professional</p>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p class="review-note">
+        Note: These are sample testimonials, not verified customer reviews.
+      </p>
+    </section>
+
+    <!-- 6. Pricing / Call to Action -->
+    <section id="pricing" class="pricing-section section-padding">
+      <div class="pricing-card">
+        <span class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</span>
+        <h2>Ready to find your rhythm?</h2>
+        <p>
+          Bring fitness, style and everyday convenience together
+          with PulseFit.
+        </p>
+
+        <div class="price">
+          <span class="price-label">Example launch price</span>
+          <strong>₹4,999</strong>
+        </div>
+
+        <a
+          href="mailto:hello@pulsefit.example?subject=PulseFit%20Product%20Enquiry"
+          class="primary-button"
+        >
+          Enquire Now →
+        </a>
+
+        <p class="pricing-note">
+          Demonstration price only. No actual purchase is processed.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 7. Footer -->
+  <footer class="footer">
+    <div class="footer-main">
+      <div>
+        <a href="#home" class="brand footer-brand">
+          <span class="brand-icon">P</span>
+          PulseFit
+        </a>
+        <p class="footer-description">
+          Move with purpose. Live with energy.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <strong>Explore</strong>
+        <a href="#features">Features</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#reviews">Reviews</a>
+      </div>
+
+      <div class="footer-links">
+        <strong>Contact</strong>
+        <a href="mailto:hello@pulsefit.example">Email us</a>
+        <a href="#pricing">Product enquiry</a>
+      </div>
+
+      <div class="footer-links">
+        <strong>Follow</strong>
+        <a href="https://www.instagram.com/" target="_blank"
+           rel="noopener noreferrer">Instagram ↗</a>
+        <a href="https://www.linkedin.com/" target="_blank"
+           rel="noopener noreferrer">LinkedIn ↗</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 PulseFit. Student project demonstration.</p>
+      <a href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
+</body>
+</html>
